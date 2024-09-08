@@ -28,6 +28,35 @@ app.get("/products", async (c: Context) => {
   return c.json(res.rows);
 });
 
+// Ruta para consultar un producto por su ID
+app.get("/products/:id", async (c: Context) => {
+  const client = c.get("pgClient") as Pool;
+  const productId = c.req.param("id");
+
+  try {
+    const res = await client.query("SELECT * FROM products WHERE id = $1", [
+      productId,
+    ]);
+
+    if (res.rows.length === 0) {
+      return c.text("Producto no encontrado", 404);
+    }
+
+    return c.json(res.rows[0]);
+  } catch (err) {
+    console.error(err);
+    return c.text("Error al obtener el producto", 500);
+  }
+});
+
+// Ruta para obtener usuarios
+app.get("/users", async (c: Context) => {
+  const client = c.get("pgClient") as Pool;
+  const res = await client.query("SELECT * FROM users");
+
+  return c.json(res.rows);
+});
+
 // Ruta raíz
 app.get("/", (c: Context) => {
   return c.json({ message: "Hello Hono!" });
