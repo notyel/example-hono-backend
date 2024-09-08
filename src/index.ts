@@ -2,7 +2,7 @@ import { type Context, Env, Hono, MiddlewareHandler } from "hono";
 import { createMiddleware } from "hono/factory";
 import { Pool } from "pg";
 
-const app = new Hono<Env>();
+const app = new Hono<Env>().basePath("/api");
 
 // Middleware para gestionar la conexión a PostgreSQL
 export const postgresMiddleware = (): MiddlewareHandler =>
