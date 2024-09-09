@@ -11,7 +11,7 @@ Este repositorio es un ejemplo de un backend utilizando Hono, un framework web l
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/example-hono-backend.git
+   git clone https://github.com/notyel/example-hono-backend.git
    cd example-hono-backend
    ```
 
