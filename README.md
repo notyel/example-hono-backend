@@ -1,6 +1,6 @@
 # Example Hono Backend
 
-Este repositorio es un ejemplo de un backend utilizando Hono, un framework web ligero y rápido, ideal para construir APIs eficientes. El proyecto está desarrollado en TypeScript e incluye la configuración básica, manejo de rutas, conexión a una base de datos PostgreSQL, y ejemplos de middleware.
+Este repositorio es un ejemplo de un backend utilizando Hono, un framework web ligero y rápido, ideal para construir APIs eficientes. El proyecto está desarrollado en **TypeScript** e incluye la configuración básica, manejo de rutas, conexión a una base de datos **PostgreSQL**, y ejemplos de **middleware**.
 
 ## Requisitos
 
