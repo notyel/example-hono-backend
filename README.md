@@ -4,7 +4,7 @@ Este repositorio es un ejemplo de un backend utilizando Hono, un framework web l
 
 ## Requisitos
 
-- Node.js v16 o superior
+- Node.js v20 o superior
 - PostgreSQL
 
 ## Instalación
